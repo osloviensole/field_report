@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: #ecf0f3;
+    font-family: "Open Sans", sans-serif;
+}
+
+.wrapper {
+    max-width: 350px;
+    min-height: 500px;
+    margin: 80px auto;
+    padding: 30px 20px 20px 20px;
+    background-color: #ecf0f3;
+    border-radius: 15px;
+    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff
+}
+
+@media(max-width: 700px) {
+    .wrapper {
+        box-shadow: none;
+    }
+}
+
+.erreur {
+    font-size: 9px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: red;
+}
+
+.logo {
+    width: 125px;
+    height: 160px;
+    margin: auto;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2%;
+}
+
+.text-center {
+    margin: 20px;
+    font-weight: bolder;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    text-transform: none;
+    font-weight: bold;
+}
+
+.wrapper .name {
+    font-weight: 600;
+    font-size: 1.4rem;
+    letter-spacing: 1.3px;
+    padding-left: 10px;
+    color: #555
+}
+
+.wrapper .form-field input {
+    width: 100%;
+    display: block;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.2rem;
+    color: #666;
+    padding: 10px 15px 10px 10px
+}
+
+.wrapper .form-field select {
+    width: 100%;
+    display: block;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.2rem;
+    color: #666;
+    padding: 10px 15px 10px 10px
+}
+
+.wrapper .form-field {
+    padding-left: 10px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+}
+
+.wrapper .form-field .fas {
+    color: #555
+}
+
+.wrapper .btn1 {
+    width: 100%;
+    height: 40px;
+    background-color: #2707b8;
+    color: #fff;
+    border-radius: 25px;
+    box-shadow: 3px 3px 3px #b1b1b1, -3px -3px 3px #fff;
+    letter-spacing: 1.3px;
+    border: none;
+    transition: 0.6s ease-out;
+    display: inline;
+}
+
+@media (max-width: 500px) {
+    .wrapper .btn1 {
+        margin: 8px;
+        margin-bottom: 13px;
+    }
+}
+
+.wrapper .btn1:hover {
+    background-color: #fff;
+    color: #2707b8;
+}
+
+.wrapper .btn {
+    margin-left: 30px;
+    width: 100px;
+    height: 40px;
+    background-color: #2707b8;
+    color: #fff;
+    border-radius: 25px;
+    box-shadow: 3px 3px 3px #b1b1b1, -3px -3px 3px #fff;
+    letter-spacing: 1.3px;
+    border: none;
+    transition: 0.6s ease-out;
+}
+
+.wrapper .btn:hover {
+    background-color: #fff;
+    color: #2707b8;
+}
+
+.wrapper a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: #e50303
+}
+
+.wrapper a:hover {
+    color: #0a0303
+}
+
+@media(max-width: 380px) {
+    .wrapper {
+        margin: 30px 20px;
+        padding: 40px 15px 15px 15px
+    }
+}
