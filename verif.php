@@ -1,5 +1,5 @@
 <?php 
-    require "db.php"; 
+    require "cli-config.php";
     if(isset($_POST['connect']))
     {
         $UserName = htmlspecialchars($_POST['UserName']);

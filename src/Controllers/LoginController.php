@@ -1,20 +1,20 @@
 <?php
-namespace Controllers;
+namespace Oslovie\FieldReport\Controllers;
 
-use Entity\User;
+use Oslovie\FieldReport\Entity\User;
 
 class LoginController
 {
-    private $username;
-    private $password;
-
     private User $user;
 
     public function __construct($username, $password, User $user) {
         $this->user = $user;
     }
 
-    public function login() {
+    public function login(string $username, string $password): void
+    {
+        if ($username !== $this->user->getEmail()){
 
+        }
     }
 }

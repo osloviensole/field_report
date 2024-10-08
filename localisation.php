@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    require "db.php";
+    require "cli-config.php";
     require "fonction.php";
     $ville = affiche_ville();
     $projet = affiche_projet();

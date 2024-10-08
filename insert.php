@@ -1,5 +1,5 @@
 <?php
-    require "db.php";
+    require "cli-config.php";
     function insertion()
     {
         try

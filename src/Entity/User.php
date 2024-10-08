@@ -1,80 +1,76 @@
 <?php
 
-namespace Entity;
+namespace Oslovie\FieldReport\Entity;
 
-use Cassandra\Uuid;
+use Oslovie\FieldReport\Repository\UserRepository;
+use Ramsey\Uuid\Uuid;
+use Doctrine\ORM\Mapping as ORM;
 
+#[ORM\Entity(repositoryClass: UserRepository::class)]
+#[ORM\UniqueConstraint(name: 'UNIQ_IDENTIFIER_USERNAME', fields: ['email', 'username'])]
 class User
 {
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column(type: 'integer', unique: true)]
     private ?Uuid $id = null;
 
-    private ?string $username = null;
+    #[ORM\Column(length: 50,nullable: false)]
+    private ?string $username;
 
-    private $email;
+    #[ORM\Column(length: 100, nullable: false)]
+    private ?string $email;
 
-    private $password;
+    #[ORM\Column]
+    private ?string $password;
 
-    /**
-     * @return mixed
-     */
-    public function getId()
+    #[ORM\Column]
+    private array $roles = [];
+
+    public function getId(): ?Uuid
     {
         return $this->id;
     }
 
-    /**
-     * @param mixed $id
-     */
-    public function setId($id): void
-    {
-        $this->id = $id;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getUsername()
+    public function getUsername(): ?string
     {
         return $this->username;
     }
 
-    /**
-     * @param mixed $username
-     */
-    public function setUsername($username): void
+    public function setUsername(?string $username): void
     {
         $this->username = $username;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getEmail()
+    public function getEmail(): ?string
     {
         return $this->email;
     }
 
-    /**
-     * @param mixed $email
-     */
-    public function setEmail($email): void
+    public function setEmail(?string $email): void
     {
         $this->email = $email;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getPassword()
+    public function getPassword(): ?string
     {
         return $this->password;
     }
 
-    /**
-     * @param mixed $password
-     */
-    public function setPassword($password): void
+    public function setPassword(?string $password): void
     {
         $this->password = $password;
     }
+
+    public function getRoles(): array
+    {
+        return $this->roles;
+    }
+
+    public function setRoles(array $roles): void
+    {
+        $this->roles = $roles;
+    }
+
+
 }

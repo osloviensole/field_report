@@ -1,0 +1,25 @@
+{
+    "name": "oslovie/field_report",
+    "license": "proprietary",
+    "autoload": {
+        "psr-4": {
+            "Oslovie\\FieldReport\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Oslovie Nsole",
+            "email": "Nsoleoslovie@outlook.com"
+        }
+    ],
+    "require": {
+        "doctrine/orm": "^2.19.7",
+        "ramsey/uuid": "^4.7",
+        "doctrine/dbal": "^3.3.2",
+        "doctrine/event-manager": "^1.2.0",
+        "doctrine/doctrine-orm-module": "^6.1",
+        "doctrine/cache": "^1.11",
+        "doctrine/annotations": "^1.13",
+        "symfony/cache": "^5.4"
+    }
+}
