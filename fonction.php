@@ -15,15 +15,10 @@
      function affiche_projet()
      {
         $bdd = database();
-        $reqAffiche = $bdd->query("SELECT * FROM defaut_projet");
-
-        return $reqAffiche;
+         return $bdd->query("SELECT * FROM defaut_projet");
      }
      function affiche_ville()
      {
         $bdd = database();
-        $reqVille = $bdd->query("SELECT * FROM defaut_ville");
-
-        return $reqVille;
+         return $bdd->query("SELECT * FROM defaut_ville");
      }
-?>
