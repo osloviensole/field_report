@@ -14,6 +14,8 @@ $dbParams = [
     'user'     => 'root',
     'password' => '',
     'dbname'   => 'field_report',
+    'host'     => '127.0.0.1',     // Assure-toi que l'hôte est défini
+    'port'     => '3306',
 ];
 
 // Configuration de Doctrine
